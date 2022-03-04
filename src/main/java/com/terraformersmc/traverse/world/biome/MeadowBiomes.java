@@ -1,7 +1,8 @@
-package com.terraformersmc.traverse.biome;
+package com.terraformersmc.traverse.world.biome;
 
 import com.terraformersmc.terraform.biomebuilder.DefaultFeature;
-import com.terraformersmc.traverse.feature.TraverseConfiguredFeatures;
+import com.terraformersmc.traverse.world.gen.feature.TraverseConfiguredFeatures;
+
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeatures;

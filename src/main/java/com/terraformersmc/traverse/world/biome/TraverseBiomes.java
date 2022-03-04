@@ -1,4 +1,4 @@
-package com.terraformersmc.traverse.biome;
+package com.terraformersmc.traverse.world.biome;
 
 import com.terraformersmc.terraform.biomebuilder.BiomeTemplate;
 import com.terraformersmc.terraform.biomebuilder.TerraformBiomeBuilder;

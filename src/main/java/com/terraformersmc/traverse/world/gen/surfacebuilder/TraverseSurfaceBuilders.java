@@ -1,4 +1,4 @@
-package com.terraformersmc.traverse.surfacebuilder;
+package com.terraformersmc.traverse.world.gen.surfacebuilder;
 
 import java.util.HashMap;
 import java.util.Map;

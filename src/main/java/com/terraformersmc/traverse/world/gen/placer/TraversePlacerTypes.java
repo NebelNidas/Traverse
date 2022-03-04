@@ -1,4 +1,4 @@
-package com.terraformersmc.traverse.feature.placer;
+package com.terraformersmc.traverse.world.gen.placer;
 
 import com.terraformersmc.terraform.tree.placer.PlacerTypes;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;

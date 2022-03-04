@@ -1,8 +1,9 @@
-package com.terraformersmc.traverse.biome;
+package com.terraformersmc.traverse.world.biome;
 
 import com.google.common.collect.ImmutableList;
 import com.terraformersmc.terraform.biomebuilder.DefaultFeature;
-import com.terraformersmc.traverse.feature.TraverseConfiguredFeatures;
+import com.terraformersmc.traverse.world.gen.feature.TraverseConfiguredFeatures;
+
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.SpawnSettings;

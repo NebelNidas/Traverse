@@ -1,12 +1,13 @@
 package com.terraformersmc.traverse;
 
 import com.terraformersmc.terraform.config.BiomeConfigHandler;
-import com.terraformersmc.traverse.biome.TraverseBiomes;
 import com.terraformersmc.traverse.block.TraverseBlocks;
-import com.terraformersmc.traverse.generation.TraverseGeneration;
 import com.terraformersmc.traverse.item.TraverseBoatTypes;
-import com.terraformersmc.traverse.surfacebuilder.TraverseSurfaceBuilders;
-import com.terraformersmc.traverse.villager.TraverseVillagerTypes;
+import com.terraformersmc.traverse.village.TraverseVillagerTypes;
+import com.terraformersmc.traverse.world.biome.TraverseBiomes;
+import com.terraformersmc.traverse.world.gen.TraverseGeneration;
+import com.terraformersmc.traverse.world.gen.surfacebuilder.TraverseSurfaceBuilders;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemStack;

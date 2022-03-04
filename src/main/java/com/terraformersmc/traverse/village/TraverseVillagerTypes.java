@@ -1,6 +1,7 @@
-package com.terraformersmc.traverse.villager;
+package com.terraformersmc.traverse.village;
 
-import com.terraformersmc.traverse.biome.TraverseBiomes;
+import com.terraformersmc.traverse.world.biome.TraverseBiomes;
+
 import net.fabricmc.fabric.api.object.builder.v1.villager.VillagerTypeHelper;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.village.VillagerType;

@@ -7,7 +7,8 @@ import com.terraformersmc.terraform.tree.block.TerraformSaplingBlock;
 import com.terraformersmc.terraform.wood.block.*;
 import com.terraformersmc.traverse.Traverse;
 import com.terraformersmc.traverse.block.sapling.TraverseSaplingGenerator;
-import com.terraformersmc.traverse.feature.TraverseConfiguredFeatures;
+import com.terraformersmc.traverse.world.gen.feature.TraverseConfiguredFeatures;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;

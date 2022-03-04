@@ -1,10 +1,11 @@
-package com.terraformersmc.traverse.generation;
+package com.terraformersmc.traverse.world.gen;
 
 import com.terraformersmc.terraform.config.BiomeConfig;
 import com.terraformersmc.terraform.config.BiomeConfigNode;
 import com.terraformersmc.terraform.overworldbiomes.OverworldBiomesExt;
 import com.terraformersmc.traverse.Traverse;
-import com.terraformersmc.traverse.biome.TraverseBiomes;
+import com.terraformersmc.traverse.world.biome.TraverseBiomes;
+
 import net.fabricmc.fabric.api.biome.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biome.v1.OverworldClimate;
 import net.minecraft.util.registry.RegistryKey;

@@ -1,7 +1,8 @@
-package com.terraformersmc.traverse.biome;
+package com.terraformersmc.traverse.world.biome;
 
 import com.terraformersmc.terraform.biomebuilder.DefaultFeature;
-import com.terraformersmc.traverse.surfacebuilder.TraverseSurfaceBuilders;
+import com.terraformersmc.traverse.world.gen.surfacebuilder.TraverseSurfaceBuilders;
+
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.SpawnSettings;

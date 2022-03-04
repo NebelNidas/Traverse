@@ -1,4 +1,4 @@
-package com.terraformersmc.traverse.feature.placer;
+package com.terraformersmc.traverse.world.gen.placer;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

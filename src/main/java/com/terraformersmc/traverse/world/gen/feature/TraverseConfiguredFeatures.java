@@ -1,4 +1,4 @@
-package com.terraformersmc.traverse.feature;
+package com.terraformersmc.traverse.world.gen.feature;
 
 import com.google.common.collect.ImmutableList;
 import com.terraformersmc.traverse.Traverse;

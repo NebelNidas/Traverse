@@ -11,10 +11,9 @@ import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.DecoratorConfig;
-import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
-import net.minecraft.world.gen.decorator.WaterDepthThresholdDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
+import net.minecraft.world.gen.placementmodifier.SurfaceWaterDepthFilterPlacementModifier;
 
 public class TraverseConfiguredFeatures {
 
@@ -43,18 +42,18 @@ public class TraverseConfiguredFeatures {
 							new CountExtraDecoratorConfig(10, 0.1F, 1))));
 
 	/* Low Ores */
-	public static final ConfiguredFeature<?, ?> LOW_DIRT = register("low_dirt", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.DIRT.getDefaultState(), 33)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
-	public static final ConfiguredFeature<?, ?> LOW_GRAVEL = register("low_gravel", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.GRAVEL.getDefaultState(), 33)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(8));
-	public static final ConfiguredFeature<?, ?> LOW_GRANITE = register("low_granite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.GRANITE.getDefaultState(), 33)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
-	public static final ConfiguredFeature<?, ?> LOW_DIORITE = register("low_diorite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.DIORITE.getDefaultState(), 33)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
-	public static final ConfiguredFeature<?, ?> LOW_ANDESITE = register("low_andesite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.ANDESITE.getDefaultState(), 33)).range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
+	public static final ConfiguredFeature<?, ?> LOW_DIRT = register("low_dirt", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.DIRT.getDefaultState(), 33)).range(new RangeFeatureConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
+	public static final ConfiguredFeature<?, ?> LOW_GRAVEL = register("low_gravel", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.GRAVEL.getDefaultState(), 33)).range(new RangeFeatureConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(8));
+	public static final ConfiguredFeature<?, ?> LOW_GRANITE = register("low_granite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.GRANITE.getDefaultState(), 33)).range(new RangeFeatureConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
+	public static final ConfiguredFeature<?, ?> LOW_DIORITE = register("low_diorite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.DIORITE.getDefaultState(), 33)).range(new RangeFeatureConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
+	public static final ConfiguredFeature<?, ?> LOW_ANDESITE = register("low_andesite", ((Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, Blocks.ANDESITE.getDefaultState(), 33)).range(new RangeFeatureConfig(UniformHeightProvider.create(YOffset.getBottom(), YOffset.aboveBottom(70))))).spreadHorizontally()).repeat(10));
 
 	/* Fir Trees */
 	public static final ConfiguredFeature<TreeFeatureConfig, ?> FIR_TREE = register("fir_tree", Feature.TREE.configure(TraverseFeatureConfigs.FIR_TREE_CONFIG));
 	public static final ConfiguredFeature<?, ?> CONIFEROUS_TREES = register("coniferous_trees", FIR_TREE.decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(7, 0.1F, 1))));
 
 	/* Swamp Trees */
-	public static final ConfiguredFeature<?, ?> TALL_SWAMP_TREE = register("tall_swamp_tree", Feature.TREE.configure(TraverseFeatureConfigs.TALL_SWAMP_TREE_CONFIG)).decorate(Decorator.WATER_DEPTH_THRESHOLD.configure(new WaterDepthThresholdDecoratorConfig(1)));
+	public static final ConfiguredFeature<?, ?> TALL_SWAMP_TREE = register("tall_swamp_tree", Feature.TREE.configure(TraverseFeatureConfigs.TALL_SWAMP_TREE_CONFIG)).decorate(Decorator.WATER_DEPTH_THRESHOLD.configure(new SurfaceWaterDepthFilterPlacementModifier(1)));
 	public static final ConfiguredFeature<?, ?> LUSH_SWAMP_TREES = register("lush_swamp_trees", TALL_SWAMP_TREE.decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(2, 0.1F, 1))));
 
 	/* Lush Vegetation */
